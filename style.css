@@ -143,13 +143,38 @@ button:hover i {
     font-size: small;
     text-align: justify;
 }
-#b3 {
-    background-color: black;
-    position: relative;
+#b3 p {
+    /*background-color: black;
+    position: relative;*/
+    margin: 20px;
+    font-size: small;
+    text-align: justify;
+}
+#f4 p {
+    margin: 20px;
+    font-size: small;
+    text-align: justify;
+}
+#b4 p {
+    margin: 20px;
+    font-size: small;
+    text-align: justify;
+}
+#f5 p {
+    margin: 20px;
+    font-size: small;
+    text-align: justify;
+}
+#b5 p {
+    margin: 20px;
+    font-size: small;
+    text-align: justify;
 }
 #s1 {
-    background-color: black;
+    /*background-color: black;
     width: 100%;
-    height: 100%;
-
+    height: 100%;*/
+    margin: 20px;
+    font-size: small;
+    text-align: justify;
 }

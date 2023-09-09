@@ -50,7 +50,7 @@ function goNextPage() {
                 paper3.style.zIndex = 3;
                 break;
             case 5:
-                paper4.classList.add("fadeIn");
+                paper4.classList.add("flipped");
                 paper4.style.zIndex = 4;
                 break;
             case 6:
@@ -99,5 +99,5 @@ function goPrevPage() {
 
 }
 function fadeIn() {
-    if(zIndex = 3);
+    if(zIndex = 2);
 }
