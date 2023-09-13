@@ -102,6 +102,7 @@ function fadeOut() {
     if(zIndex >= 10);
 }
 
+/*This function works with text*/
 function fade(element) {
     var op = 1;  // initial opacity
     var timer = setInterval(function () {
@@ -112,9 +113,21 @@ function fade(element) {
         element.style.opacity = op;
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op -= op * 0.1;
-    }, 50);
+    }, 500);
+}
+function fadeBox(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.backgroundColor.display = 'none';
+        }
+        element.style.backgroundColor.opacity = op;
+        element.style.backgroundColor.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 500);
 }
 var desaparece = document.getElementsByClassName('black_box');
-var desapareceLetra = document.getElementById('f4');
-fade(desaparece);
-fade(desapareceLetra);
+/*var desapareceLetra = document.getElementById('f4');*/
+/*fadeBox(desaparece);*/
+/*fade(desapareceLetra);*/
