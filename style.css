@@ -52,11 +52,10 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    /*background-color: lightcoral;*/
     z-index: 10;
-    background: #000000;
-    animation: fadeBackground 10s;
-    animation-fill-mode: forwards;
+    /*background-color: yellowgreen;*/
+    /*animation: fadeBackground 10s;
+    animation-fill-mode: forwards;*/
 }
 @keyframes fadeBackground {
     from  { opacity: 1; }

@@ -18,6 +18,24 @@ let currentLocation = 1;
 let num0Papers = 5;
 let maxLocation = num0Papers + 1;
 
+/*Added functions for opacity. Test*/
+/*Trying to make this function work with div*/
+function fadeBox(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.01){
+            clearInterval(timer);
+            element.style.backgroundColor.display = 'none';
+        }
+        element.style.backgroundColor = "#00FF00";
+        element.style.backgroundColor.opacity = op;
+        element.style.backgroundColor.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.01;
+    }, 500);
+}
+var desaparece = document.getElementsById('b3');
+/*End of test*/
+
 function openBook() {
     book.style.transform = "translateX(50%)";
     prevBtn.style.transform = "translateX(-180px)";
@@ -56,6 +74,7 @@ function goNextPage() {
             case 6:
                 paper5.classList.add("flipped");
                 paper5.style.zIndex = 5;
+                fadeBox(desaparece);
                 break;
             default:
                 throw new Error("unknow state")
@@ -98,9 +117,9 @@ function goPrevPage() {
     }
 
 }
-function fadeOut() {
+/*function fadeOut() {
     if(zIndex >= 10);
-}
+}*/
 
 /*This function works with text*/
 function fade(element) {
@@ -113,21 +132,10 @@ function fade(element) {
         element.style.opacity = op;
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op -= op * 0.1;
-    }, 500);
+    }, 500); 
 }
-function fadeBox(element) {
-    var op = 1;  // initial opacity
-    var timer = setInterval(function () {
-        if (op <= 0.1){
-            clearInterval(timer);
-            element.style.backgroundColor.display = 'none';
-        }
-        element.style.backgroundColor.opacity = op;
-        element.style.backgroundColor.filter = 'alpha(opacity=' + op * 100 + ")";
-        op -= op * 0.1;
-    }, 500);
-}
-var desaparece = document.getElementsByClassName('black_box');
+
 /*var desapareceLetra = document.getElementById('f4');*/
-/*fadeBox(desaparece);*/
+
+
 /*fade(desapareceLetra);*/
